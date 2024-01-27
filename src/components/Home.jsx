@@ -21,7 +21,6 @@ const Home = () => {
           an automated system that efficiently records specific trip details
           from origin (point A) to destination (point B).
         </p>
-        <a href="https://www.freepik.com">Designed by starline / Freepik</a>
       </header>
       <main>
         <button>Request a demo</button>
@@ -29,6 +28,7 @@ const Home = () => {
           <img src={addtrip_form} alt="" className="addtrip" />
           <img src={dashboard} alt="" className="dash" />
           <img src={pdf_front} alt="" className="pdf" />
+          <span className="abs-background"></span>
         </figure>
       </main>
     </section>

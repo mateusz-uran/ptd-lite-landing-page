@@ -35,7 +35,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  z-index: 3;
+  z-index: 99;
 }
 
 #navbar .navbar-inner.toggle {
@@ -173,17 +173,13 @@
   }
 }
 /*=========================================================================================*/
-/*=========================Main content for mobile & desktop===============================*/
+/*=========================Home section content for mobile & desktop===============================*/
 
 #home_section {
   height: calc(100vh - 60px);
 }
 
 #home_section header {
-  background-image: url("assets/19449741_res.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   color: #000;
   padding: 1rem;
   display: flex;
@@ -191,6 +187,7 @@
   align-items: center;
   text-align: center;
   position: relative;
+  background: var(--primary-color-light);
 }
 
 #home_section header a {
@@ -208,7 +205,7 @@
 
 #home_section header h2 {
   width: 70%;
-  font-size: calc(25px + 0.390625vw);
+  font-size: 2rem;
   line-height: 1.5em;
 }
 
@@ -218,8 +215,9 @@
 
 #home_section header p {
   font-size: calc(12px + 0.390625vw);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.6em;
+  color: #7a7777;
 }
 
 #home_section header .p_second {
@@ -230,6 +228,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #fff;
+  border-top-left-radius: 50% 5%;
+  border-top-right-radius: 50% 5%;
 }
 
 #home_section main > * {
@@ -276,7 +277,7 @@
 
 #home_section main figure img.addtrip {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   height: 30%;
   right: 0.5rem;
   top: -5rem;
@@ -289,17 +290,29 @@
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.2);
   opacity: 0;
   animation: appearDash 0.5s ease-out 1s forwards;
+  width: 90%;
+  z-index: 2;
 }
 
 #home_section main figure img.pdf {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   bottom: -2em;
   left: 0.5rem;
   height: 30%;
   opacity: 0;
   transform: translateY(100%);
   animation: slideInPdf 0.5s ease-out 2.5s forwards;
+}
+
+#home_section main figure .abs-background {
+  position: absolute;
+  width: 95%;
+  height: 50%;
+  background: var(--primary-color);
+  z-index: 1;
+  bottom: -5%;
+  border-radius: 5px 80% 5px 5px;
 }
 
 @media (min-width: 600px) {
@@ -315,6 +328,10 @@
 @media (min-width: 1025px) {
   #home_section header {
     padding: 5rem 0;
+  }
+
+  #home_section header h2 {
+    font-size: 3rem;
   }
 
   #home_section header p {
