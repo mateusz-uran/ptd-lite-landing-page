@@ -375,21 +375,21 @@
 
 @keyframes slideInAddTrip {
   to {
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Move to original position */
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes appearDash {
   to {
-    opacity: 1; /* Fade in */
+    opacity: 1;
   }
 }
 
 @keyframes slideInPdf {
   to {
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Move to original position */
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 /*===================================================================================================*/
