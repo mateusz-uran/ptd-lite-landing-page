@@ -8,10 +8,16 @@
 :root {
   --primary-color: #3d7f3a;
   --primary-color-light: #e4f4e4;
-  --tran-02: all 0.2s ease;
+  --bg-green-bright: #6fcc6b;
+
   --text-color-gray: #ddd;
-  --transform-scale: scale(1.08);
+  --text-color-dark-gray: #424242;
+
   --thin-border: #eaecf0;
+  --calc-value: 0.390625vw;
+
+  --tran-02: all 0.2s ease;
+  --transform-scale: scale(1.08);
 }
 
 /*=========================Navbar for mobile & desktop===============================*/
@@ -35,7 +41,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  z-index: 3;
+  z-index: 99;
 }
 
 #navbar .navbar-inner.toggle {
@@ -173,17 +179,9 @@
   }
 }
 /*=========================================================================================*/
-/*=========================Main content for mobile & desktop===============================*/
-
-#home_section {
-  height: calc(100vh - 60px);
-}
+/*=========================Home section content for mobile & desktop===============================*/
 
 #home_section header {
-  background-image: url("assets/19449741_res.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   color: #000;
   padding: 1rem;
   display: flex;
@@ -191,6 +189,7 @@
   align-items: center;
   text-align: center;
   position: relative;
+  background: #fff;
 }
 
 #home_section header a {
@@ -208,7 +207,7 @@
 
 #home_section header h2 {
   width: 70%;
-  font-size: calc(25px + 0.390625vw);
+  font-size: 2rem;
   line-height: 1.5em;
 }
 
@@ -218,8 +217,9 @@
 
 #home_section header p {
   font-size: calc(12px + 0.390625vw);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.6em;
+  color: #7a7777;
 }
 
 #home_section header .p_second {
@@ -230,6 +230,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: var(--primary-color-light);
+  border-top-left-radius: 50% 5%;
+  padding-bottom: 5rem;
+  border-top-right-radius: 50% 5%;
+  position: relative;
 }
 
 #home_section main > * {
@@ -276,7 +281,7 @@
 
 #home_section main figure img.addtrip {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   height: 30%;
   right: 0.5rem;
   top: -5rem;
@@ -289,17 +294,29 @@
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.2);
   opacity: 0;
   animation: appearDash 0.5s ease-out 1s forwards;
+  width: 90%;
+  z-index: 2;
 }
 
 #home_section main figure img.pdf {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   bottom: -2em;
   left: 0.5rem;
   height: 30%;
   opacity: 0;
   transform: translateY(100%);
   animation: slideInPdf 0.5s ease-out 2.5s forwards;
+}
+
+#home_section main figure .dash-background {
+  position: absolute;
+  background: #fff;
+  width: 90%;
+  height: 50%;
+  z-index: 1;
+  bottom: -5%;
+  border-radius: 5px 80% 5px 5px;
 }
 
 @media (min-width: 600px) {
@@ -315,6 +332,10 @@
 @media (min-width: 1025px) {
   #home_section header {
     padding: 5rem 0;
+  }
+
+  #home_section header h2 {
+    font-size: 3rem;
   }
 
   #home_section header p {
@@ -334,6 +355,10 @@
     bottom: -5rem;
     height: 25%;
   }
+
+  #home_section main figure .dash-background {
+    width: 95%;
+  }
 }
 
 @media (min-width: 1740px) {
@@ -352,24 +377,118 @@
 
 @keyframes slideInAddTrip {
   to {
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Move to original position */
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes appearDash {
   to {
-    opacity: 1; /* Fade in */
+    opacity: 1;
   }
 }
 
 @keyframes slideInPdf {
   to {
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Move to original position */
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 /*===================================================================================================*/
 /*========================="How it works" content for mobile & desktop===============================*/
+
+#howitworks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 0.8rem;
+}
+
+#howitworks h2 {
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+#howitworks .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+#howitworks .card-wrapper {
+  width: 100%;
+  background: var(--primary-color-light);
+  border-radius: 5px;
+  border-top-left-radius: 15px;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.2);
+}
+
+#howitworks .card-wrapper .top {
+  display: flex;
+  align-items: center;
+}
+
+#howitworks .card-wrapper .top .number {
+  background: var(--bg-green-bright);
+  border-top-left-radius: 15px;
+  font-size: calc(25px + var(--calc-value));
+  font-weight: 900;
+  color: #fff;
+}
+
+#howitworks .card-wrapper .top h4 {
+  font-size: calc(18px + var(--calc-value));
+  color: var(--text-color-dark-gray);
+}
+
+#howitworks .card-wrapper .top .number,
+#howitworks .card-wrapper .top h4 {
+  padding: 0.3rem;
+}
+
+#howitworks .card-wrapper .bottom p {
+  font-size: calc(13px + var(--calc-value));
+  line-height: 1.3;
+}
+
+#howitworks .card-wrapper .bottom p,
+#howitworks .card-wrapper .bottom .img-wrapper {
+  padding: 0.3rem 0.5rem;
+}
+
+#howitworks .card-wrapper .bottom .img-wrapper {
+  text-align: center;
+  border-radius: 10px;
+}
+
+#howitworks .card-wrapper .img-wrapper img {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid var(--thin-border);
+}
+
+#howitworks .arrow {
+  color: var(--bg-green-bright);
+  margin: 0.8rem 0;
+  font-size: calc(25px + 0.390625vw);
+}
+
+@media (min-width: 801px) {
+  #howitworks .card-wrapper {
+    max-width: 60%;
+  }
+
+  #howitworks .card-wrapper .bottom p {
+    line-height: 1.6;
+    font-weight: 600;
+  }
+
+  #howitworks .card-wrapper.result .img-wrapper img {
+    width: 70%;
+  }
+}
 
 /*===================================================================================================*/
