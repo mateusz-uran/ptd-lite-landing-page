@@ -176,7 +176,7 @@
 /*=========================Home section content for mobile & desktop===============================*/
 
 #home_section {
-  height: calc(100vh - 60px);
+  /* height: calc(100vh - 60px); */
 }
 
 #home_section header {
@@ -187,7 +187,7 @@
   align-items: center;
   text-align: center;
   position: relative;
-  background: var(--primary-color-light);
+  background: #fff;
 }
 
 #home_section header a {
@@ -228,9 +228,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fff;
+  background: var(--primary-color-light);
   border-top-left-radius: 50% 5%;
+  padding-bottom: 5rem;
   border-top-right-radius: 50% 5%;
+  position: relative;
 }
 
 #home_section main > * {
@@ -305,11 +307,11 @@
   animation: slideInPdf 0.5s ease-out 2.5s forwards;
 }
 
-#home_section main figure .abs-background {
+#home_section main figure .dash-background {
   position: absolute;
-  width: 95%;
+  background: #fff;
+  width: 90%;
   height: 50%;
-  background: var(--primary-color);
   z-index: 1;
   bottom: -5%;
   border-radius: 5px 80% 5px 5px;
@@ -350,6 +352,10 @@
   #home_section main figure img.pdf {
     bottom: -5rem;
     height: 25%;
+  }
+
+  #home_section main figure .dash-background {
+    width: 95%;
   }
 }
 

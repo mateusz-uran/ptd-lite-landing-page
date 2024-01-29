@@ -28,7 +28,7 @@ const Home = () => {
           <img src={addtrip_form} alt="" className="addtrip" />
           <img src={dashboard} alt="" className="dash" />
           <img src={pdf_front} alt="" className="pdf" />
-          <span className="abs-background"></span>
+          <span className="dash-background"></span>
         </figure>
       </main>
     </section>
