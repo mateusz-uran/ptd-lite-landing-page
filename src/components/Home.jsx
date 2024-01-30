@@ -1,5 +1,4 @@
 import React from "react";
-import test_image from "../assets/Isolated Tablet- Laptop and Smartphone Composition.jpg";
 import dashboard from "../assets/dashboard_medium.png";
 import pdf_front from "../assets/pdf1.png";
 import addtrip_form from "../assets/addtrip_form.png";

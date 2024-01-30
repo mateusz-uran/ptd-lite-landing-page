@@ -405,8 +405,9 @@
 }
 
 #howitworks h2 {
-  color: #fff;
-  margin-bottom: 0.8rem;
+  color: var(--text-color-dark-gray);
+  margin-bottom: 1.3rem;
+  font-size: calc(25px + var(--calc-value));
 }
 
 #howitworks .card {
@@ -422,6 +423,12 @@
   border-radius: 5px;
   border-top-left-radius: 15px;
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.2);
+  transition: var(--tran-02);
+}
+
+#howitworks .card-wrapper:hover,
+#howitworks .card-wrapper:active {
+  transform: var(--transform-scale);
 }
 
 #howitworks .card-wrapper .top {
@@ -472,7 +479,7 @@
 
 #howitworks .arrow {
   color: var(--bg-green-bright);
-  margin: 0.8rem 0;
+  margin: 1rem 0;
   font-size: calc(25px + 0.390625vw);
 }
 
