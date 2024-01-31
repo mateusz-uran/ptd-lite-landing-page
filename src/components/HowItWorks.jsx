@@ -41,7 +41,10 @@ const HowItWorks = () => {
 
   return (
     <section id="howitworks">
-      <h2>How does it work?</h2>
+      <div className="header-wrapper">
+        <p>Application purpose</p>
+        <h2>How does it work?</h2>
+      </div>
 
       {howItWorksData.map((how, index) => {
         const { number, header, paragraph, image } = how;
