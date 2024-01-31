@@ -1,14 +1,14 @@
-import trip_group_image from "./assets/trip_group.png";
+import trip_group_image from "./assets/trip_group_big.png";
 import trip_group_video from "./assets/trip_group.mp4";
 import truck_icon_svg from "./assets/truck-svgrepo-com.svg";
 import invoice_svg from "./assets/invoice-bill-svgrepo-com.svg";
-import invoice_image from "./assets/invoice.png";
+import invoice_image from "./assets/invoice_big.png";
 import statistics_svg from "./assets/statistics-analytics-svgrepo-com.svg";
-import statistics_image from "./assets/stats_wide.png";
+import statistics_image from "./assets/stats_big.png";
 import archive_svg from "./assets/archives-file-svgrepo-com.svg";
-import archive_image from "./assets/archive.png";
+import archive_image from "./assets/archive_big.png";
 import update_svg from "./assets/update-svgrepo-com.svg";
-import update_image from "./assets/updates.png";
+import update_image from "./assets/updates_big.png";
 
 export const featuresData = [
   {
@@ -39,7 +39,7 @@ export const featuresData = [
     Icon: archive_svg,
     header: "Archived cards",
     description:
-      "All created cards by you are stored in database so you can go back to your data at anytime with Archive feature. Pick specific date or range of dates when you created your cards and feel free to check what you\ve putted there, generate PDF etc.",
+      "All created cards by you are stored in database so you can go back to your data at anytime with Archive feature. Pick specific date or range of dates when you created your cards and feel free to check what you've putted there, generate PDF etc.",
     image: archive_image,
     video: undefined,
   },

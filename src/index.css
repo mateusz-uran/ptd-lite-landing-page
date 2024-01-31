@@ -27,8 +27,8 @@ button:active {
   --text-color-gray: #ddd;
   --text-color-dark-gray: #424242;
   --header-font-size: calc(25px + var(--calc-value));
-  --subheader-font-size: calc(18px + var(--calc-value));
-  --paragraph-font-size: calc(13px + var(--calc-value));
+  --subheader-font-size: calc(15px + var(--calc-value));
+  --paragraph-font-size: calc(11px + var(--calc-value));
 
   --thin-border: #eaecf0;
   --calc-value: 0.390625vw;
@@ -544,7 +544,8 @@ button:active {
 
 #features .feature-wrapper .desc .icon {
   display: flex;
-  width: 10%;
+  width: 45px;
+  height: 45px;
   padding: 0.3rem;
   border-radius: 50%;
   background: var(--primary-color-light);
@@ -597,10 +598,49 @@ button:active {
 
 #features .feature-wrapper .img-wrapper {
   background: #fff;
+  text-align: center;
 }
 
 #features .feature-wrapper .img-wrapper img {
-  border: 3px solid var(--thin-border);
+  border: 3px solid #000;
   border-radius: 10px;
+}
+
+@media (min-width: 600px) {
+  #features .feature-wrapper {
+    display: flex;
+    /* margin: 1.5rem 0; */
+  }
+
+  #features .feature-wrapper:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  #features .feature-wrapper .desc .icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  #features .feature-wrapper .desc .button-wrapper {
+    margin-top: auto;
+  }
+
+  #features .feature-wrapper .desc,
+  #features .feature-wrapper .img-wrapper {
+    width: 50%;
+    margin: 1.5rem;
+  }
+
+  #features .feature-wrapper .img-wrapper {
+    display: flex;
+  }
+}
+
+@media (min-width: 1025px) {
+  #features .feature-wrapper .desc p {
+    width: 80%;
+    font-weight: 600;
+    color: var(--text-color-dark-gray);
+  }
 }
 /*===============================================================================================*/
