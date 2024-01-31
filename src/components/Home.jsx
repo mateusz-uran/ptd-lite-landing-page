@@ -1,7 +1,7 @@
 import React from "react";
-import dashboard from "../assets/dashboard_medium.png";
-import pdf_front from "../assets/pdf1.png";
-import addtrip_form from "../assets/addtrip_form.png";
+import dashboard from "../assets/home/dashboard_medium.png";
+import pdf_front from "../assets/home/pdf1.png";
+import addtrip_form from "../assets/home/addtrip_form.png";
 
 const Home = () => {
   return (

@@ -1,7 +1,7 @@
-import add_card from "./assets/addcard_form.png";
-import trip_table from "./assets/trip_table.png";
-import fuel_table from "./assets/fuel_table.png";
-import generate_pdf from "./assets/generate_pdf.png";
+import add_card from "./assets/how_it_works/addcard_form.png";
+import trip_table from "./assets/how_it_works/trip_table.png";
+import fuel_table from "./assets/how_it_works/fuel_table.png";
+import generate_pdf from "./assets/how_it_works/generate_pdf.png";
 
 export const howItWorksData = [
   {

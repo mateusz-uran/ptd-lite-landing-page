@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import pdf1 from "../assets/pdf1.png";
-import pdf2 from "../assets/pdf2.png";
+import React, { useEffect, useRef, useState } from "react";
+import pdf1 from "../assets/home/pdf1.png";
+import pdf2 from "../assets/how_it_works/pdf2.png";
 import { FaArrowCircleDown } from "react-icons/fa";
 import { howItWorksData } from "../howitworks_data";
 

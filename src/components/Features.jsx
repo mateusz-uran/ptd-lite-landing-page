@@ -15,7 +15,7 @@ const Features = () => {
           <div key={index} className="feature-wrapper">
             <div className="desc">
               <div className="icon">
-                <img src={Icon} alt="" className="svg-style" />
+                <img src={Icon} alt="" />
               </div>
               <h4>{header}</h4>
               <p>{description}</p>

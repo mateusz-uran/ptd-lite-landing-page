@@ -531,6 +531,10 @@ button:active {
   font-size: var(--header-font-size);
 }
 
+#features .feature-wrapper {
+  margin-bottom: 3rem;
+}
+
 #features .feature-wrapper .desc {
   display: flex;
   flex-direction: column;
@@ -552,6 +556,12 @@ button:active {
   color: var(--primary-color);
 }
 
+#features .feature-wrapper .desc h4,
+#features .feature-wrapper .desc p,
+#features .feature-wrapper .desc .button-wrapper {
+  margin: 0.3rem 0;
+}
+
 #features .feature-wrapper .desc h4 {
   font-size: var(--subheader-font-size);
 }
@@ -562,6 +572,7 @@ button:active {
 
 #features .feature-wrapper .desc .button-wrapper {
   display: flex;
+  margin-top: 2rem;
 }
 
 #features .feature-wrapper .desc .button-wrapper button {
@@ -590,12 +601,6 @@ button:active {
   color: #fff;
 }
 
-#features .feature-wrapper .desc h4,
-#features .feature-wrapper .desc p,
-#features .feature-wrapper .desc .button-wrapper {
-  margin: 0.3rem 0;
-}
-
 #features .feature-wrapper .img-wrapper {
   background: #fff;
   text-align: center;
@@ -609,7 +614,20 @@ button:active {
 @media (min-width: 600px) {
   #features .feature-wrapper {
     display: flex;
-    /* margin: 1.5rem 0; */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #features .feature-wrapper .desc,
+  #features .feature-wrapper .img-wrapper img {
+    width: 80%;
+  }
+}
+
+@media (min-width: 800px) {
+  #features .feature-wrapper {
+    display: flex;
+    flex-direction: row;
   }
 
   #features .feature-wrapper:nth-child(odd) {
@@ -619,10 +637,7 @@ button:active {
   #features .feature-wrapper .desc .icon {
     width: 55px;
     height: 55px;
-  }
-
-  #features .feature-wrapper .desc .button-wrapper {
-    margin-top: auto;
+    justify-content: center;
   }
 
   #features .feature-wrapper .desc,
@@ -633,10 +648,21 @@ button:active {
 
   #features .feature-wrapper .img-wrapper {
     display: flex;
+    justify-content: center;
   }
 }
 
 @media (min-width: 1025px) {
+  #features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #features .feature-wrapper {
+    width: 80%;
+  }
+
   #features .feature-wrapper .desc p {
     width: 80%;
     font-weight: 600;

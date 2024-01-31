@@ -1,14 +1,13 @@
-import trip_group_image from "./assets/trip_group_big.png";
-import trip_group_video from "./assets/trip_group.mp4";
-import truck_icon_svg from "./assets/truck-svgrepo-com.svg";
-import invoice_svg from "./assets/invoice-bill-svgrepo-com.svg";
-import invoice_image from "./assets/invoice_big.png";
-import statistics_svg from "./assets/statistics-analytics-svgrepo-com.svg";
-import statistics_image from "./assets/stats_big.png";
-import archive_svg from "./assets/archives-file-svgrepo-com.svg";
-import archive_image from "./assets/archive_big.png";
-import update_svg from "./assets/update-svgrepo-com.svg";
-import update_image from "./assets/updates_big.png";
+import trip_group_image from "./assets/features/trip_group_big.png";
+import truck_icon_svg from "./assets/features/icons/truck-svgrepo-com.svg";
+import invoice_svg from "./assets/features/icons/invoice-bill-svgrepo-com.svg";
+import invoice_image from "./assets/features/invoice_big.png";
+import statistics_svg from "./assets/features/icons/statistics-analytics-svgrepo-com.svg";
+import statistics_image from "./assets/features/stats_big.png";
+import archive_svg from "./assets/features/icons/archives-file-svgrepo-com.svg";
+import archive_image from "./assets/features/archive_big.png";
+import update_svg from "./assets/features/icons/update-svgrepo-com.svg";
+import update_image from "./assets/features/updates_big.png";
 
 export const featuresData = [
   {
@@ -17,7 +16,7 @@ export const featuresData = [
     description:
       "Added trips describes place where driver is loading cargo and then unloading it. Application allows user to group those trips with same cargo.",
     image: trip_group_image,
-    video: trip_group_video,
+    video: undefined,
   },
   {
     Icon: invoice_svg,
