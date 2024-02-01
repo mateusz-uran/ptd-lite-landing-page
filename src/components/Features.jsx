@@ -24,11 +24,16 @@ const Features = () => {
                   <FaRegCirclePlay />
                   <span>Demo</span>
                 </button>
-                <button>Learn more</button>
+                <button>
+                  <span>Learn more</span>
+                </button>
               </div>
             </div>
             <div className="img-wrapper">
-              <img src={image} alt="" />
+              <div className="img-inner">
+                <img src={image} alt="" />
+              </div>
+              <div className="img-background"></div>
             </div>
           </div>
         );
