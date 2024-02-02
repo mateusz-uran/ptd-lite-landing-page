@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import { featuresData } from "../features_data";
 import { FaRegCirclePlay } from "react-icons/fa6";
+import Modal from "./Modal";
+import useModal from "../hooks/useModal ";
 
 const Features = () => {
+  const [isShowingModal, toggleModal, activeIndex] = useModal();
+
   return (
     <section id="features">
       <div className="header-wrapper">
@@ -20,7 +24,7 @@ const Features = () => {
               <h4>{header}</h4>
               <p>{description}</p>
               <div className="button-wrapper">
-                <button>
+                <button onClick={() => toggleModal(index, video)}>
                   <FaRegCirclePlay />
                   <span>Demo</span>
                 </button>
@@ -35,6 +39,15 @@ const Features = () => {
               </div>
               <div className="img-background"></div>
             </div>
+
+            {activeIndex === index && (
+              <Modal
+                show={isShowingModal}
+                onCloseButtonClick={toggleModal}
+                activeIndex={activeIndex}
+                videoSrc={video}
+              />
+            )}
           </div>
         );
       })}
