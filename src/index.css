@@ -42,6 +42,10 @@ button:active {
   overflow: hidden;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /*=========================Navbar for mobile & desktop===============================*/
 #navbar {
   height: 60px;
@@ -763,5 +767,44 @@ button:active {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding: 0.5rem;
+  justify-content: center;
+}
+
+#modal header {
+  margin-bottom: 0.4rem;
+}
+
+#modal header button {
+  padding: 0.2rem;
+  border-radius: 5px;
+  display: flex;
+  border: 0;
+}
+
+#modal header button {
+  font-size: calc(15px + var(--calc-value));
+}
+
+#modal header button:hover,
+#modal header button:active {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+#modal .content .player .vjs-big-play-button {
+  border-color: var(--primary-color);
+}
+
+@media (min-width: 1025px) {
+  #modal {
+    padding: 10rem;
+  }
+}
+
+@media (min-width: 1425px) {
+  #modal {
+    padding: 15rem;
+  }
 }
 /*=============================================================================*/

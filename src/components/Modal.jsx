@@ -1,16 +1,16 @@
 import React, { useRef, useState } from "react";
 import VideoPlayer from "./VideoPlayer";
 import { createPortal } from "react-dom";
+import { MdClose } from "react-icons/md";
 
-const Modal = ({ show, onCloseButtonClick, activeIndex, videoSrc }) => {
+const Modal = ({ show, onCloseButtonClick, videoSrc }) => {
   if (!show) {
     return null;
   }
-
   const playerRef = useRef(null);
 
   const videoJsOptions = {
-    autoplay: true,
+    autoplay: false,
     controls: true,
     responsive: true,
     fluid: true,
@@ -38,10 +38,16 @@ const Modal = ({ show, onCloseButtonClick, activeIndex, videoSrc }) => {
   return createPortal(
     <section id="modal">
       <header>
-        <button onClick={onCloseButtonClick}>Close</button>
+        <button onClick={onCloseButtonClick}>
+          <MdClose />{" "}
+        </button>
       </header>
       <div className="content">
-        <VideoPlayer options={videoJsOptions} onReady={handlePlayerReady} />
+        <VideoPlayer
+          className="video-player"
+          options={videoJsOptions}
+          onReady={handlePlayerReady}
+        />
       </div>
     </section>,
     document.getElementById("modal-root")

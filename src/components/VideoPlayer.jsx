@@ -45,7 +45,7 @@ const VideoPlayer = (props) => {
   }, [playerRef]);
 
   return (
-    <div data-vjs-player>
+    <div data-vjs-player className="player">
       <div ref={videoRef} />
     </div>
   );
