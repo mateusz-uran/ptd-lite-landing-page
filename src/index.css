@@ -15,6 +15,11 @@ button {
   transition: var(--tran-02);
 }
 
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
 button:active {
   transform: var(--transform-scale-high);
 }
@@ -23,6 +28,7 @@ button:active {
   --primary-color: #3d7f3a;
   --primary-color-light: #e4f4e4;
   --bg-green-bright: #6fcc6b;
+  --bg-dark: #313539;
 
   --text-color-gray: #ddd;
   --text-color-dark-gray: #424242;
@@ -42,10 +48,6 @@ button:active {
   overflow: hidden;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
 /*=========================Navbar for mobile & desktop===============================*/
 #navbar {
   height: 60px;
@@ -62,7 +64,7 @@ button:hover {
   transform: translate(-100%, 0);
   transition: var(--tran-02);
   height: calc(70vh - 60px);
-  background: var(--primary-color);
+  background: var(--bg-dark);
   width: 100%;
   text-align: center;
   display: flex;
@@ -126,11 +128,39 @@ button:hover {
 }
 
 @media (min-width: 480px) {
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #navbar.sticky {
+    height: 45px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    animation-duration: 0.7s;
+    animation-name: fadeInDown;
+    animation-timing-function: ease-in-out;
+  }
+
   #navbar .logo-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1001;
+  }
+
+  #navbar img {
+    height: 45px;
   }
 
   #navbar .navbar-inner {
@@ -138,6 +168,10 @@ button:hover {
     width: 100%;
     height: 60px;
     transform: none;
+  }
+
+  #navbar.sticky .navbar-inner {
+    height: 55px;
   }
 
   #navbar .navbar-inner .list-wrapper ul {
@@ -148,7 +182,7 @@ button:hover {
   #navbar .navbar-inner .list-wrapper ul li {
     border-bottom: 2px solid transparent;
     pointer-events: none;
-    margin: 0 0.5rem;
+    margin: 0 1rem;
     transition: var(--tran-02);
   }
 
@@ -168,7 +202,7 @@ button:hover {
     margin-left: auto;
     margin-right: 1rem;
     background: #fff;
-    border-radius: 7px;
+    border-radius: 4px;
     border: 2px solid transparent;
   }
 
@@ -182,6 +216,7 @@ button:hover {
   #navbar .navbar-inner .list-wrapper ul li a {
     pointer-events: auto;
     color: var(--text-color-gray);
+    letter-spacing: 0.03em;
   }
 
   #navbar .navbar-inner .list-wrapper ul li a:hover,
@@ -197,7 +232,8 @@ button:hover {
 
   #navbar .navbar-inner .list-wrapper li:last-child a {
     color: #000;
-    padding: 0.6rem;
+    padding: 0.2rem 0.4rem;
+    font-size: calc(9px + 0.390625vw);
   }
 
   #navbar .hamburger-react {
@@ -413,6 +449,8 @@ button:hover {
   align-items: center;
   padding: 1.5rem 0.8rem;
   margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 #howitworks .header-wrapper {
@@ -522,6 +560,7 @@ button:hover {
 /*========================="Features" content for mobile & desktop===============================*/
 #features {
   background: #f4f5f7;
+  padding: 0 1rem;
 }
 
 #features .header-wrapper {
@@ -811,12 +850,13 @@ button:hover {
 /*========================="Footer"styling================================*/
 
 #footer {
-  background: #313539;
+  background: var(--bg-dark);
   color: #fff;
   display: flex;
   flex-direction: column;
   padding: 2rem 0;
   padding-bottom: 0;
+  padding: 0 1rem;
 }
 
 #footer .top {
@@ -860,6 +900,11 @@ button:hover {
   margin: 0.3rem 0;
 }
 
+#footer .top .column .inner-col ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
 #footer .bottom p {
   font-size: calc(7px + var(--calc-value));
   display: flex;
@@ -888,7 +933,7 @@ button:hover {
   #footer .top,
   #footer .bottom {
     width: 100%;
-    margin: 0 2rem;
+    padding: 0 2rem;
   }
 
   #footer .top .column .desc {

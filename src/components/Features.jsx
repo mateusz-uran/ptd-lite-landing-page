@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { featuresData } from "../features_data";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import Modal from "./Modal";

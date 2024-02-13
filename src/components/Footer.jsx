@@ -23,15 +23,23 @@ const Footer = () => {
           <div className="inner-col">
             <h3>Navigation</h3>
             <ul>
-              <li>how it works</li>
-              <li>features</li>
-              <li>request a demo</li>
+              <li>
+                <a href="">how it works</a>
+              </li>
+              <li>
+                <a href="">features</a>
+              </li>
+              <li>
+                <a href="">request a demo</a>
+              </li>
             </ul>
           </div>
           <div className="inner-col">
             <h3>Contact</h3>
             <ul>
-              <li>Github</li>
+              <li>
+                <a href="">Github</a>
+              </li>
             </ul>
           </div>
         </div>
