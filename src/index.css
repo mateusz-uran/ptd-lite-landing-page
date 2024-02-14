@@ -243,6 +243,23 @@ button:active {
 /*=========================================================================================*/
 /*=========================Home section content for mobile & desktop===============================*/
 
+#home_section {
+  position: relative;
+}
+
+#home_section::before {
+  background-image: url("./assets/magicpattern-grid-pattern-1707839473470.png");
+  background-size: contain;
+  background-position: center;
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
 #home_section header {
   color: #000;
   padding: 1rem;
@@ -251,12 +268,11 @@ button:active {
   align-items: center;
   text-align: center;
   position: relative;
-  background: #fff;
 }
 
 #home_section header h2 {
   width: 70%;
-  font-size: 2rem;
+  font-size: calc(18px + var(--calc-value));
   line-height: 1.5em;
 }
 
@@ -269,6 +285,8 @@ button:active {
   font-weight: 600;
   line-height: 1.6em;
   color: #7a7777;
+  color: #000;
+  max-width: 80%;
 }
 
 #home_section header .p_second {
@@ -328,19 +346,20 @@ button:active {
 #home_section main figure img.addtrip {
   position: absolute;
   z-index: 3;
-  height: 30%;
+  max-height: 130px;
   right: 0.5rem;
   top: -5rem;
   opacity: 0;
   transform: translateY(-70%);
-  animation: slideInAddTrip 1s ease-out 2.5s forwards;
+  animation: slideInAddTrip 1s ease-out 1.5s forwards;
 }
 
 #home_section main figure img.dash {
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  animation: appearDash 0.5s ease-out 1s forwards;
+  animation: appearDash 0.5s ease-out 0.5s forwards;
   width: 90%;
+  max-height: 800px;
   z-index: 2;
 }
 
@@ -349,10 +368,10 @@ button:active {
   z-index: 3;
   bottom: -2em;
   left: 0.5rem;
-  height: 30%;
+  max-height: 100px;
   opacity: 0;
   transform: translateY(100%);
-  animation: slideInPdf 0.5s ease-out 2.5s forwards;
+  animation: slideInPdf 0.5s ease-out 1.5s forwards;
 }
 
 #home_section main figure .dash-background {
@@ -366,12 +385,23 @@ button:active {
 }
 
 @media (min-width: 600px) {
+  #home_section header p {
+    max-width: 60%;
+  }
+
   #home_section main figure img.addtrip {
     top: -5rem;
+    max-height: 200px;
+  }
+
+  #home_section main figure img.dash {
+    width: 70%;
+    max-height: 600px;
   }
 
   #home_section main figure img.pdf {
     bottom: -5rem;
+    max-height: 160px;
   }
 }
 
@@ -394,12 +424,16 @@ button:active {
 
   #home_section main figure img.addtrip {
     top: -5rem;
-    height: 20%;
+    max-height: 200px;
+  }
+
+  #home_section main figure img.dash {
+    max-height: 650px;
   }
 
   #home_section main figure img.pdf {
     bottom: -5rem;
-    height: 25%;
+    max-height: 200px;
   }
 
   #home_section main figure .dash-background {
@@ -409,15 +443,19 @@ button:active {
 
 @media (min-width: 1740px) {
   #home_section main figure img.addtrip {
-    right: -12em;
-    height: 30%;
+    right: -4.5em;
+    max-height: 250px;
     transform: translateY(-100%);
   }
 
+  #home_section main figure img.dash {
+    max-height: 650px;
+  }
+
   #home_section main figure img.pdf {
-    left: -12rem;
-    height: 30%;
-    bottom: 0;
+    left: -5rem;
+    max-height: 200px;
+    bottom: -3rem;
   }
 }
 

@@ -35,7 +35,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="inner-col">
-            <h3>Contact</h3>
+            <h3>Documentation & Source code</h3>
             <ul>
               <li>
                 <a href="">Github</a>

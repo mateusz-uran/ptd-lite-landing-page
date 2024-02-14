@@ -43,6 +43,15 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
+              <Link
+                to="footer"
+                smooth={true}
+                onClick={() => setOpen((prev) => !prev)}
+              >
+                Documentation
+              </Link>
+            </li>
+            <li>
               <a href="">Login</a>
             </li>
           </ul>
