@@ -22,11 +22,11 @@ const Home = () => {
         </p>
       </header>
       <main>
-        <button>Request a demo</button>
+        <button className="btn primary-btn">Request a demo</button>
         <figure>
-          <img src={addtrip_form} alt="" className="addtrip" />
-          <img src={dashboard} alt="" className="dash" />
-          <img src={pdf_front} alt="" className="pdf" />
+          <img src={addtrip_form} alt="Add Trips form" className="addtrip" />
+          <img src={dashboard} alt="Dashboard view" className="dash" />
+          <img src={pdf_front} alt="PDF card page" className="pdf" />
           <span className="dash-background"></span>
         </figure>
       </main>

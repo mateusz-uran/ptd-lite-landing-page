@@ -14,7 +14,7 @@ const Features = () => {
         <h2>More options</h2>
       </div>
       {featuresData.map((feature, index) => {
-        const { Icon, header, description, image, video } = feature;
+        const { Icon, header, description, image, alt, video } = feature;
         return (
           <div key={index} className="feature-wrapper">
             <div className="desc">
@@ -24,18 +24,21 @@ const Features = () => {
               <h4>{header}</h4>
               <p>{description}</p>
               <div className="button-wrapper">
-                <button onClick={() => toggleModal(index, video)}>
+                <button
+                  className="btn primary-btn"
+                  onClick={() => toggleModal(index, video)}
+                >
                   <FaRegCirclePlay />
                   <span>Demo</span>
                 </button>
-                <button>
+                <button className="btn secondary-btn">
                   <span>Learn more</span>
                 </button>
               </div>
             </div>
             <div className="img-wrapper">
               <div className="img-inner">
-                <img src={image} alt="" />
+                <img src={image} alt={alt} />
               </div>
               <div className="img-background"></div>
             </div>

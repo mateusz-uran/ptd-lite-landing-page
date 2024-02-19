@@ -47,7 +47,7 @@ const HowItWorks = () => {
       </div>
 
       {howItWorksData.map((how, index) => {
-        const { number, header, paragraph, image } = how;
+        const { number, header, paragraph, image, alt } = how;
         const isIntersecting = intersectingCards.includes(
           cardRefs[index].current
         );
@@ -65,7 +65,7 @@ const HowItWorks = () => {
               <div className="bottom">
                 <p>{paragraph}</p>
                 <div className="img-wrapper">
-                  <img src={image} alt="" />
+                  <img src={image} alt={alt} />
                 </div>
               </div>
             </div>
@@ -90,8 +90,8 @@ const HowItWorks = () => {
         </div>
         <div className="bottom">
           <div className="img-wrapper">
-            <img src={pdf1} alt="" />
-            <img src={pdf2} alt="" />
+            <img src={pdf1} alt="PDF card first page" />
+            <img src={pdf2} alt="PDF card second page" />
           </div>
         </div>
       </div>

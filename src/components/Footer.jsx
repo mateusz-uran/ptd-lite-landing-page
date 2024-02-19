@@ -1,5 +1,8 @@
 import React from "react";
 import logo from "../assets/logo_big.png";
+import { Link } from "react-scroll";
+import { IoLogoGithub } from "react-icons/io";
+import { BiLogoGmail } from "react-icons/bi";
 
 const Footer = () => {
   var currentYear = new Date().getFullYear();
@@ -7,40 +10,39 @@ const Footer = () => {
   return (
     <footer id="footer">
       <div className="top">
-        <div className="column">
-          <div className="logo">
-            <img src={logo} alt="logo-ptd" />
-          </div>
-          <div className="desc">
+        <div className="logo-wrapper">
+          <img src={logo} alt="" />
+          <p>
             Open source application created for professional truck drivers to
-            help them maintain clean and efficient work. Users can create and
-            manage cards much faster than doing same work on paper with hand.
-            Additonal features like statistics helps keep track of work and
-            improve balance.
+            improve work efficiency.
+          </p>
+          <div className="icons-wrapper">
+            <a href="https://github.com/mateusz-uran/ptd-lite-mono">
+              <IoLogoGithub />
+            </a>
+            <a href="mailto: ptdlite@gmail.com">
+              <BiLogoGmail />
+            </a>
           </div>
         </div>
-        <div className="column">
-          <div className="inner-col">
-            <h3>Navigation</h3>
-            <ul>
-              <li>
-                <a href="">how it works</a>
-              </li>
-              <li>
-                <a href="">features</a>
-              </li>
-              <li>
-                <a href="">request a demo</a>
-              </li>
-            </ul>
+        <div className="links">
+          <div className="column">
+            <h4>Navigation</h4>
+            <div className="link-wrapper">
+              <Link href="#" to="howitworks" smooth={true} className="link">
+                How it works
+              </Link>
+              <Link href="#" to="features" smooth={true} className="link">
+                Features
+              </Link>
+            </div>
           </div>
-          <div className="inner-col">
-            <h3>Documentation & Source code</h3>
-            <ul>
-              <li>
-                <a href="">Github</a>
-              </li>
-            </ul>
+          <div className="column">
+            <h4>Contact & Docs</h4>
+            <div className="link-wrapper">
+              <a href="https://github.com/mateusz-uran/ptd-lite-mono">Github</a>
+              <a href="mailto: ptdlite@gmail.com">Gmail</a>
+            </div>
           </div>
         </div>
       </div>
