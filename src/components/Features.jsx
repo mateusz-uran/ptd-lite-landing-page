@@ -3,6 +3,7 @@ import { featuresData } from "../features_data";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import Modal from "./Modal";
 import useModal from "../hooks/useModal ";
+import { Link } from "react-router-dom";
 
 const Features = () => {
   const [isShowingModal, toggleModal, activeIndex] = useModal();
@@ -14,7 +15,8 @@ const Features = () => {
         <h2>More options</h2>
       </div>
       {featuresData.map((feature, index) => {
-        const { Icon, header, description, image, alt, video } = feature;
+        const { Icon, header, description, image, alt, video, uri, feautre } =
+          feature;
         return (
           <div key={index} className="feature-wrapper">
             <div className="desc">
@@ -32,7 +34,9 @@ const Features = () => {
                   <span>Demo</span>
                 </button>
                 <button className="btn secondary-btn">
-                  <span>Learn more</span>
+                  <span>
+                    <Link to={`/${uri}`}>Learn more</Link>
+                  </span>
                 </button>
               </div>
             </div>

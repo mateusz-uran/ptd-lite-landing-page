@@ -1,18 +1,24 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
-import Features from "./components/Features";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
-import HowItWorks from "./components/HowItWorks";
-import Navbar from "./components/Navbar";
+import Layout from "./Layout";
+import SingleFeature from "./components/SingleFeature";
+import LayoutWrapper from "./LayoutWrapper";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <LayoutWrapper children={<Layout />} />,
+    },
+    {
+      path: "/:feature",
+      element: <LayoutWrapper children={<SingleFeature />} />,
+    },
+  ]);
+
   return (
     <>
-      <Navbar />
-      <Home />
-      <HowItWorks />
-      <Features />
-      <Footer />
+      <RouterProvider router={router} />
     </>
   );
 }

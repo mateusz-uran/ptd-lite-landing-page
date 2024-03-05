@@ -1,53 +1,31 @@
-import React, { useRef, useState } from "react";
-import VideoPlayer from "./VideoPlayer";
+import React from "react";
 import { createPortal } from "react-dom";
 import { MdClose } from "react-icons/md";
+import VideoPlayerWrapper from "./VideoPlayerWrapper";
 
 const Modal = ({ show, onCloseButtonClick, videoSrc }) => {
   if (!show) {
     return null;
   }
-  const playerRef = useRef(null);
 
-  const videoJsOptions = {
+  const videoOptions = {
     autoplay: false,
     controls: true,
     responsive: true,
     fluid: true,
-    sources: [
-      {
-        src: videoSrc,
-        type: "video/mp4",
-      },
-    ],
-  };
-
-  const handlePlayerReady = (player) => {
-    playerRef.current = player;
-
-    // You can handle player events here, for example:
-    player.on("waiting", () => {
-      videojs.log("player is waiting");
-    });
-
-    player.on("dispose", () => {
-      videojs.log("player will dispose");
-    });
+    src: videoSrc,
+    type: "video/mp4",
   };
 
   return createPortal(
     <section id="modal">
       <header>
         <button onClick={onCloseButtonClick}>
-          <MdClose />{" "}
+          <MdClose />
         </button>
       </header>
       <div className="content">
-        <VideoPlayer
-          className="video-player"
-          options={videoJsOptions}
-          onReady={handlePlayerReady}
-        />
+        <VideoPlayerWrapper videoOptions={videoOptions} />
       </div>
     </section>,
     document.getElementById("modal-root")

@@ -18,6 +18,7 @@ export const featuresData = [
     image: trip_group_image,
     alt: "Trip cargo",
     video: "src/assets/features/videos/PTD Lite - Cargo.mp4",
+    uri: "cargo",
   },
   {
     Icon: invoice_svg,
@@ -27,6 +28,7 @@ export const featuresData = [
     image: invoice_image,
     alt: "Invoice",
     video: "src/assets/features/videos/PTD Lite - Invoice.mp4",
+    uri: "invoice",
   },
   {
     Icon: statistics_svg,
@@ -36,6 +38,7 @@ export const featuresData = [
     image: statistics_image,
     alt: "Statistics",
     video: "src/assets/features/videos/PTD Lite - Statistics.mp4",
+    uri: "statistics",
   },
   {
     Icon: archive_svg,
@@ -45,6 +48,7 @@ export const featuresData = [
     image: archive_image,
     alt: "Archive",
     video: "src/assets/features/videos/PTD Lite - Archive.mp4",
+    uri: "archive",
   },
   {
     Icon: update_svg,
@@ -54,5 +58,6 @@ export const featuresData = [
     image: update_image,
     alt: "Updates",
     video: "src/assets/features/videos/PTD Lite - Updates.mp4",
+    uri: "update",
   },
 ];
