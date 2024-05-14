@@ -1,8 +1,7 @@
 import React from "react";
-import test_image from "../assets/Isolated Tablet- Laptop and Smartphone Composition.jpg";
-import dashboard from "../assets/dashboard_medium.png";
-import pdf_front from "../assets/pdf1.png";
-import addtrip_form from "../assets/addtrip_form.png";
+import dashboard from "../assets/home/dashboard_medium.png";
+import pdf_front from "../assets/home/pdf1.png";
+import addtrip_form from "../assets/home/addtrip_form.png";
 
 const Home = () => {
   return (
@@ -23,11 +22,11 @@ const Home = () => {
         </p>
       </header>
       <main>
-        <button>Request a demo</button>
+        <button className="btn primary-btn">Request a demo</button>
         <figure>
-          <img src={addtrip_form} alt="" className="addtrip" />
-          <img src={dashboard} alt="" className="dash" />
-          <img src={pdf_front} alt="" className="pdf" />
+          <img src={addtrip_form} alt="Add Trips form" className="addtrip" />
+          <img src={dashboard} alt="Dashboard view" className="dash" />
+          <img src={pdf_front} alt="PDF card page" className="pdf" />
           <span className="dash-background"></span>
         </figure>
       </main>
